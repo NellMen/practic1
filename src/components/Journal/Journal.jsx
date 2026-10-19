@@ -1,9 +1,10 @@
-import { stories } from './content';
-import { Arrow, Eyebrow } from './Shared';
+import styles from './Journal.module.css';
+import { stories } from '../content';
+import { Arrow, Eyebrow } from '../Shared/Shared';
 
 export default function Journal() {
 	return (
-		<section className='home-section home-journal' id='journal'>
+		<section className={`${styles.root} home-section home-journal`} id='journal'>
 			<div className='home-section-heading'>
 				<div>
 					<Eyebrow>Идеи и материалы</Eyebrow>

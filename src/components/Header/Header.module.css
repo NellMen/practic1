@@ -1,0 +1,92 @@
+/* Component-scoped styles. */
+.root {
+height: 66px;
+  margin: 0 5.2%;
+  border-bottom: 1px solid rgba(23, 25, 21, .12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.root :global(.home-logo) {
+font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -.5px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.root :global(.home-nav) a {
+  text-decoration: none;
+}
+
+.root :global(.home-logo) span {
+display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-left: 4px;
+  background: var(--home-lime);
+  vertical-align: 1px;
+}
+
+.root :global(.home-nav) {
+display: flex;
+  gap: 26px;
+  margin-left: 7%;
+}
+
+.root :global(.home-nav) a {
+font-size: 11px;
+}
+
+.root :global(.home-nav) a:first-child {
+border-bottom: 1px solid var(--home-lime);
+}
+
+.root :global(.home-header-tools) {
+display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 13px;
+}
+
+.root :global(.home-menu) {
+display: none;
+  padding: 8px 0 8px 8px;
+  border: 0;
+  background: transparent;
+}
+
+.root :global(.home-menu) span {
+display: block;
+  width: 20px;
+  height: 1px;
+  margin: 5px 0;
+  background: var(--home-ink);
+}
+
+@media (max-width: 900px) {
+.root {
+height: 56px;
+}
+.root :global(.home-nav) {
+gap: 16px;
+    margin-left: 0;
+}
+.root :global(.home-header-tools) {
+gap: 9px;
+}
+}
+
+@media (max-width: 600px) {
+.root {
+margin: 0 5%;
+}
+.root :global(.home-nav),
+.root :global(.home-header-tools) {
+display: none;
+}
+.root :global(.home-menu) {
+display: block;
+}
+}

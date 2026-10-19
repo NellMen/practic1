@@ -1,0 +1,82 @@
+/* Component-scoped styles. */
+.root {
+padding: 54px 5.2%;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 14px;
+}
+
+.root > img {
+height: 100%;
+  min-height: 360px;
+}
+
+.root :global(.home-featured-copy) {
+padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--home-lime);
+}
+
+.root :global(.home-featured-copy) :global(.home-eyebrow) {
+  color: rgba(23, 25, 21, .7);
+}
+
+.root :global(.home-featured-copy) > p {
+  margin-bottom: 22px;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.root :global(.home-featured-copy) h2 {
+margin: 28px 0 16px;
+  font-size: clamp(32px, 4vw, 61px);
+  line-height: .94;
+  letter-spacing: -.05em;
+}
+
+.root :global(.home-featured-copy) :global(.home-button) {
+margin-bottom: 14px;
+}
+
+.root :global(.home-featured-copy) > small {
+font-size: 8px;
+  text-transform: uppercase;
+}
+
+.root :global(.home-featured-price) {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  margin: auto 0 12px;
+  padding-top: 18px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+.root :global(.home-featured-copy) {
+padding: 22px;
+}
+}
+
+@media (max-width: 600px) {
+.root {
+padding: 35px 5%;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+.root > img {
+min-height: 0;
+    aspect-ratio: 1.05;
+}
+.root :global(.home-featured-copy) {
+padding: 23px;
+}
+.root :global(.home-featured-copy) h2 {
+margin: 20px 0 13px;
+    font-size: 38px;
+}
+}

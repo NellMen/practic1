@@ -1,9 +1,10 @@
-import { images } from './content';
-import { Arrow, Eyebrow } from './Shared';
+import styles from './FeaturedProduct.module.css';
+import { images } from '../content';
+import { Arrow, Eyebrow } from '../Shared/Shared';
 
 export default function FeaturedProduct() {
 	return (
-		<section className='home-featured'>
+		<section className={`${styles.root} home-featured`}>
 			<img src={images.pendant} alt='Подвесной светильник над обеденным столом' />
 			<div className='home-featured-copy'>
 				<Eyebrow>Хит нашей коллекции</Eyebrow>

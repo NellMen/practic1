@@ -1,19 +1,19 @@
-import './App.css';
-import Categories from './components/Categories';
-import Contact from './components/Contact';
-import FeaturedProduct from './components/FeaturedProduct';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Journal from './components/Journal';
-import Manifesto from './components/Manifesto';
-import Newsletter from './components/Newsletter';
-import Products from './components/Products';
-import Workshop from './components/Workshop';
+import styles from './App.module.css';
+import Categories from './components/Categories/Categories';
+import Contact from './components/Contact/Contact';
+import FeaturedProduct from './components/FeaturedProduct/FeaturedProduct';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
+import Journal from './components/Journal/Journal';
+import Manifesto from './components/Manifesto/Manifesto';
+import Newsletter from './components/Newsletter/Newsletter';
+import Products from './components/Products/Products';
+import Workshop from './components/Workshop/Workshop';
 
 function App() {
 	return (
-		<main className='home-page' id='footer'>
+		<main className={styles.page} id='footer'>
 			<Header />
 			<Hero />
 			<Categories />

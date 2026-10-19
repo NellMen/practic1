@@ -1,0 +1,73 @@
+/* Component-scoped styles. */
+.root {
+padding: 38px 5.2% 15px;
+  color: var(--home-paper);
+  background: var(--home-ink);
+}
+
+.root a {
+  text-decoration: none;
+}
+
+.root :global(.home-eyebrow) {
+  color: var(--home-lime);
+}
+
+.root :global(.home-footer-main) {
+display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding-bottom: 30px;
+}
+
+.root :global(.home-footer-main) h2 {
+margin: 15px 0 8px;
+  font-size: 20px;
+}
+
+.root :global(.home-footer-main) > div:first-child > p {
+margin-top: 9px;
+  color: #a8aaa0;
+  font-size: 9px;
+}
+
+.root :global(.home-footer-links) {
+display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.root :global(.home-footer-links) > div {
+display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 9px;
+}
+
+.root :global(.home-footer-links) :global(.home-eyebrow) {
+margin-bottom: 5px;
+}
+
+.root :global(.home-footer-bottom) {
+padding-top: 13px;
+  border-top: 1px solid rgba(243, 242, 235, .16);
+  display: flex;
+  justify-content: space-between;
+  color: #a8aaa0;
+  font-size: 8px;
+}
+
+@media (max-width: 600px) {
+.root {
+padding: 30px 5% 13px;
+}
+.root :global(.home-footer-main) {
+grid-template-columns: 1fr;
+    gap: 25px;
+    padding-bottom: 22px;
+}
+.root :global(.home-footer-bottom) {
+flex-wrap: wrap;
+    gap: 8px 16px;
+}
+}

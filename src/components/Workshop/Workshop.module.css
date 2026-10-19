@@ -1,0 +1,71 @@
+/* Component-scoped styles. */
+.root {
+  background: var(--home-soft);
+}
+
+.root :global(.home-workshop-content) {
+display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 35px;
+}
+
+.root :global(.home-workshop-content) > img {
+height: 100%;
+  min-height: 340px;
+}
+
+.root :global(.home-process) {
+display: flex;
+  flex-direction: column;
+}
+
+.root :global(.home-process) article {
+flex: 1;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(23, 25, 21, .14);
+}
+
+.root :global(.home-process) article:first-child {
+padding-top: 0;
+}
+
+.root :global(.home-process) article:last-child {
+border: 0;
+}
+
+.root :global(.home-process) h3 {
+margin: 10px 0 7px;
+  font-size: 19px;
+}
+
+.root :global(.home-process) article > p {
+max-width: 400px;
+  color: var(--home-muted);
+  font-size: 10px;
+}
+
+@media (max-width: 900px) {
+.root :global(.home-workshop-content) {
+gap: 24px;
+}
+}
+
+@media (max-width: 600px) {
+.root :global(.home-workshop-content) {
+grid-template-columns: 1fr;
+    gap: 16px;
+}
+.root :global(.home-workshop-content) > img {
+min-height: 0;
+    aspect-ratio: 1.1;
+}
+.root :global(.home-process) article {
+padding: 13px 0;
+}
+.root :global(.home-process) article:first-child {
+padding-top: 0;
+}
+.root :global(.home-process) h3 {
+font-size: 17px;
+}
+}

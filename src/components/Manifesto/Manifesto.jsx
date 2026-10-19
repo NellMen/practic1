@@ -1,8 +1,9 @@
-import { Eyebrow } from './Shared';
+import styles from './Manifesto.module.css';
+import { Eyebrow } from '../Shared/Shared';
 
 export default function Manifesto() {
 	return (
-		<section className='home-manifesto' id='about'>
+		<section className={`${styles.root} home-manifesto`} id='about'>
 			<Eyebrow>Мы меняем точку зрения</Eyebrow>
 			<h2>Хороший свет меняет комнату. Необычный — меняет взгляд на вещи.</h2>
 			<div className='home-manifesto-bottom'>

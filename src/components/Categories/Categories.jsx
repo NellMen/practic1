@@ -1,11 +1,12 @@
-import { categories, images } from './content';
-import { Arrow, Eyebrow } from './Shared';
+import styles from './Categories.module.css';
+import { categories, images } from '../content';
+import { Arrow, Eyebrow } from '../Shared/Shared';
 
 const categoryImages = [images.room, images.pendant, images.detail, images.studio];
 
 export default function Categories() {
 	return (
-		<section className='home-section home-categories' id='catalog'>
+		<section className={`${styles.root} home-section home-categories`} id='catalog'>
 			<div className='home-section-heading'>
 				<div>
 					<Eyebrow>Свет для дома</Eyebrow>

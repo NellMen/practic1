@@ -1,8 +1,9 @@
-import { Arrow, Eyebrow } from './Shared';
+import styles from './Newsletter.module.css';
+import { Arrow, Eyebrow } from '../Shared/Shared';
 
 export default function Newsletter() {
 	return (
-		<section className='home-newsletter'>
+		<section className={`${styles.root} home-newsletter`}>
 			<div>
 				<Eyebrow>До встречи на свету</Eyebrow>
 				<h2>

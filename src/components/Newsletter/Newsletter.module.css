@@ -1,0 +1,52 @@
+/* Component-scoped styles. */
+.root {
+padding: 42px 5.2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+  background: var(--home-lime);
+}
+
+.root :global(.home-eyebrow) {
+color: rgba(23, 25, 21, .68);
+}
+
+.root h2 {
+margin-top: 13px;
+}
+
+.root > div:first-child > p {
+margin-top: 12px;
+  font-size: 9px;
+}
+
+.root :global(.home-newsletter-form) {
+display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.root :global(.home-newsletter-form) > button:first-child {
+min-height: 39px;
+  padding: 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(23, 25, 21, .5);
+  background: transparent;
+  text-align: left;
+  font-size: 10px;
+}
+
+.root :global(.home-newsletter-form) > small {
+font-size: 8px;
+}
+
+@media (max-width: 600px) {
+.root {
+padding: 35px 5%;
+    grid-template-columns: 1fr;
+    gap: 22px;
+}
+}

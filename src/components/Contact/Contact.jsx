@@ -1,4 +1,5 @@
-import { Arrow, Eyebrow } from './Shared';
+import styles from './Contact.module.css';
+import { Arrow, Eyebrow } from '../Shared/Shared';
 
 const questions = [
 	['Как учесть светильник заранее?', 'Подскажем размеры, высоту и расположение.'],
@@ -8,7 +9,7 @@ const questions = [
 
 export default function Contact() {
 	return (
-		<section className='home-contact'>
+		<section className={`${styles.root} home-contact`}>
 			<div>
 				<Eyebrow>Мы поможем с выбором</Eyebrow>
 				<h2>

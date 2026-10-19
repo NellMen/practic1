@@ -1,5 +1,6 @@
-import { images } from './content';
-import { Eyebrow } from './Shared';
+import styles from './Workshop.module.css';
+import { images } from '../content';
+import { Eyebrow } from '../Shared/Shared';
 
 const process = [
 	['Сначала — жест', 'Мы работаем с ощущением и движением. Обсуждаем форму, материал и свет.'],
@@ -12,7 +13,7 @@ const process = [
 
 export default function Workshop() {
 	return (
-		<section className='home-section home-workshop'>
+		<section className={`${styles.root} home-section home-workshop`}>
 			<div className='home-section-heading'>
 				<div>
 					<Eyebrow>Свет до формы</Eyebrow>

@@ -1,0 +1,44 @@
+/* Component-scoped styles. */
+.root :global(.home-story-grid) {
+display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.root :global(.home-story) img {
+aspect-ratio: 1.45;
+  margin-bottom: 12px;
+}
+
+.root :global(.home-story) h3 {
+font-size: 15px;
+  line-height: 1.15;
+}
+
+.root :global(.home-story) h3 :global(.home-arrow) {
+display: inline-block;
+  margin-left: 3px;
+}
+
+.root :global(.home-story) p {
+margin-top: 8px;
+  color: var(--home-muted);
+  font-size: 9px;
+}
+
+.root :global(.home-button-outline) {
+margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+.root :global(.home-story-grid) {
+grid-template-columns: 1fr;
+    gap: 22px;
+}
+.root :global(.home-story) img {
+aspect-ratio: 1.35;
+}
+.root :global(.home-story) h3 {
+font-size: 16px;
+}
+}

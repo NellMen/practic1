@@ -1,8 +1,9 @@
-import { Eyebrow } from './Shared';
+import styles from './Footer.module.css';
+import { Eyebrow } from '../Shared/Shared';
 
 export default function Footer() {
 	return (
-		<footer className='home-footer'>
+		<footer className={`${styles.root} home-footer`}>
 			<div className='home-footer-main'>
 				<div>
 					<Eyebrow>Приезжайте в гости</Eyebrow>

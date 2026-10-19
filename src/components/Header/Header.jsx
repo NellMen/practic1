@@ -1,6 +1,7 @@
+import styles from './Header.module.css';
 export default function Header() {
 	return (
-		<header className='home-header'>
+		<header className={`${styles.root} home-header`}>
 			<a className='home-logo' href='#top' aria-label='Не форма — на главную'>
 				НЕ ФОРМА
 				<span />

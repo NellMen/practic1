@@ -1,0 +1,153 @@
+.page {
+  --home-ink: #171915;
+  --home-paper: #f3f2eb;
+  --home-soft: #e9e8df;
+  --home-lime: #d7ff00;
+  --home-muted: #77796f;
+  width: 100%;
+  overflow: hidden;
+  background: var(--home-paper);
+  color: var(--home-ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page,
+.page *,
+.page *::before,
+.page *::after {
+  box-sizing: border-box;
+}
+
+.page h1,
+.page h2,
+.page h3,
+.page p,
+.page figure {
+  margin: 0;
+}
+
+.page h1,
+.page h2,
+.page h3 {
+  font-weight: 500;
+}
+
+.page img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.page button,
+.page a {
+  color: inherit;
+  font: inherit;
+}
+
+.page button {
+  cursor: pointer;
+}
+
+.page :global(.home-eyebrow) {
+  color: var(--home-muted);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.page :global(.home-button) {
+  min-height: 39px;
+  padding: 0 13px;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 10px;
+}
+
+.page :global(.home-button-dark) {
+  width: 100%;
+  color: #fff !important;
+  background: var(--home-ink);
+}
+
+.page :global(.home-button-outline) {
+  margin-top: 27px;
+  border-color: rgba(23, 25, 21, .25);
+  background: transparent;
+}
+
+.page :global(.home-arrow) {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.page :global(.home-section) {
+  padding: 64px 5.2%;
+}
+
+.page :global(.home-section-heading) {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.page :global(.home-section-heading) h2,
+.page :global(.home-contact) h2,
+.page :global(.home-newsletter) h2 {
+  margin-top: 9px;
+  font-size: clamp(32px, 4vw, 60px);
+  line-height: .96;
+  letter-spacing: -.05em;
+}
+
+.page :global(.home-section-heading) > p {
+  max-width: 215px;
+  padding-bottom: 5px;
+  color: var(--home-muted);
+  font-size: 10px;
+}
+
+@media (min-width: 1500px) {
+  .page {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .page :global(.home-section) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page :global(.home-section) {
+    padding: 39px 5%;
+  }
+
+  .page :global(.home-section-heading) {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 19px;
+  }
+
+  .page :global(.home-section-heading) h2,
+  .page :global(.home-contact) h2,
+  .page :global(.home-newsletter) h2 {
+    font-size: 36px;
+  }
+
+  .page :global(.home-section-heading) > p {
+    max-width: 260px;
+  }
+}

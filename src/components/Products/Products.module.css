@@ -1,0 +1,88 @@
+/* Component-scoped styles. */
+.root {
+text-align: center;
+}
+
+.root :global(.home-section-heading) {
+text-align: left;
+}
+
+.root :global(.home-product-grid) {
+display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  text-align: left;
+}
+
+.root :global(.home-product-image) {
+position: relative;
+  overflow: hidden;
+  background: #e2dfd5;
+}
+
+.root :global(.home-product-image) img {
+aspect-ratio: .9;
+}
+
+.root :global(.home-product-tag) {
+position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 7px;
+  background: var(--home-lime);
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.root :global(.home-product-mark) {
+position: absolute;
+  right: 9px;
+  bottom: 9px;
+  width: 23px;
+  height: 23px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--home-paper);
+  font-size: 13px;
+}
+
+.root :global(.home-product-title) {
+display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.root :global(.home-product-title) {
+margin-top: 10px;
+}
+
+.root :global(.home-product-title) h3 {
+font-size: 13px;
+  text-transform: uppercase;
+}
+
+.root :global(.home-product-title) > span {
+font-size: 10px;
+}
+
+.root :global(.home-product) > p,
+.root :global(.home-product) > small {
+color: var(--home-muted);
+  font-size: 9px;
+}
+
+.root :global(.home-product) > small {
+display: block;
+  margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+.root :global(.home-product-grid) {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 21px 10px;
+}
+.root :global(.home-product-image) img {
+aspect-ratio: .86;
+}
+}

@@ -1,9 +1,10 @@
-import { products } from './content';
-import { Arrow, Eyebrow } from './Shared';
+import styles from './Products.module.css';
+import { products } from '../content';
+import { Arrow, Eyebrow } from '../Shared/Shared';
 
 function ProductCard({ product }) {
 	return (
-		<article className='home-product'>
+		<article className={`${styles.root} home-product`}>
 			<div className='home-product-image'>
 				<img src={product.image} alt={`Светильник «${product.label}»`} />
 				<span className='home-product-tag'>Новая форма</span>

@@ -1,9 +1,10 @@
-import { images } from './content';
-import { Arrow, Eyebrow } from './Shared';
+import styles from './Hero.module.css';
+import { images } from '../content';
+import { Arrow, Eyebrow } from '../Shared/Shared';
 
 export default function Hero() {
 	return (
-		<section className='home-hero' id='top'>
+		<section className={`${styles.root} home-hero`} id='top'>
 			<div className='home-hero-heading'>
 				<Eyebrow>Коллекционный свет / 2025</Eyebrow>
 				<h1>

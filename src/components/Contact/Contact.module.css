@@ -1,0 +1,59 @@
+/* Component-scoped styles. */
+.root {
+padding: 55px 5.2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  color: var(--home-paper);
+  background: var(--home-ink);
+}
+
+.root :global(.home-eyebrow) {
+  color: var(--home-lime);
+}
+
+.root :global(.home-button-accent) {
+  background: var(--home-lime);
+}
+
+.root h2 {
+margin: 24px 0 14px;
+  font-size: clamp(38px, 4.8vw, 70px);
+}
+
+.root > div:first-child > p {
+max-width: 360px;
+  margin-bottom: 20px;
+  color: #a8aaa0;
+  font-size: 10px;
+}
+
+.root :global(.home-questions) article {
+padding: 13px 0;
+  border-bottom: 1px solid rgba(243, 242, 235, .16);
+}
+
+.root :global(.home-questions) article:first-child {
+padding-top: 0;
+}
+
+.root :global(.home-questions) h3 {
+margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.root :global(.home-questions) p {
+color: #a8aaa0;
+  font-size: 9px;
+}
+
+@media (max-width: 600px) {
+.root {
+padding: 39px 5%;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+.root h2 {
+margin: 20px 0 13px;
+}
+}
